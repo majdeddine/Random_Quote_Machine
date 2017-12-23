@@ -1,5 +1,14 @@
 $(document).ready(function(){
-  $.getJSON("https://quotesondesign.com/wp-json/posts?", function(a) {
-  $("body").append(a[0].content + "<p>&mdash; " + a[0].title + "</p>")
-});
+  $.ajax({
+    headers: {
+      "X-Mashape-Key": config.KEY,
+      Accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=',
+    success: function(data) {
+      console.log(data)
+      }
+
+    })
 })
