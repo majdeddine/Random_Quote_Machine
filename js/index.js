@@ -18,4 +18,8 @@ $(document).ready(function(){
   }
 
   get_quote()
+  
+  $('#s').on('click',function(){
+    get_quote()
+  })
 })
