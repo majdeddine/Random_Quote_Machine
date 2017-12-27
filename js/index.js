@@ -12,7 +12,6 @@ $(document).ready(function(){
           var data = JSON.parse(d)
           $(".twitter-share-button").attr('href', `https://twitter.com/intent/tweet?text=${data.quote}`)
           $(".twitter-share-button").attr('data-hashtags', data.author)
-          // $(".twitter-share-button").attr('href', `https://twitter.com/share?text=${data.quote}`)
           $('.quote').html(data.quote)
           $('.author').html(data.author)
           console.log($(".twitter-share-button").attr('data-text'))
